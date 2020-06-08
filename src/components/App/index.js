@@ -10,6 +10,7 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 
 import * as ROUTES from '../../constants/routes';
+import { withAuthentication } from '../Session';
  
 const App = () => (
   <Router>
@@ -26,5 +27,5 @@ const App = () => (
     </div>
   </Router>
 );
- 
-export default App;
+
+export default withAuthentication(App);
